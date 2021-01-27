@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+     http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+     http://www.springframework.org/schema/context 
+     http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+	<bean class="com.nit.di.Address" name="add">
+		<!-- Injecting value by value tag -->
+		<property name="street">
+			<value>5th</value>
+		</property>
+		<!-- Injecting value by value attribute -->
+		<property name="block" value="B">
+		</property>
+		<!-- Injecting value by value attribute and self closing property tag -->
+		<property name="city" value="Jhansi" />
+		<property name="State" value="U.P."></property>
+	</bean>
+
+	<!-- Second Been -->
+
+	<bean class="com.nit.di.Address" name="add2">
+		<property name="block" value="C" />
+		<property name="State" value="Gujrat" />
+		<property name="city" value="Ahemdabad" />
+		<property name="street" value="12th" />
+
+	</bean>
+
+     
+	<bean class="com.nit.di.Employee" name="emp1">
+	<constructor-arg value="Neelesh"></constructor-arg>
+	<constructor-arg value ="101" type="int"></constructor-arg>
+	<constructor-arg  ref="add2"></constructor-arg>
+	
+	
+	</bean>
+	<!-- Third Bean -->
+
+
+	<!-- <bean class="com.nit.spring.dependency_injection.Student" name="student3" 
+		p:id="125" p:name="Ramesh" p:address="Noida" > -->
+	<!-- </bean> -->
+	
+
+
+
+
+</beans>
