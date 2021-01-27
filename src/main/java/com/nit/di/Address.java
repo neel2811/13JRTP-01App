@@ -6,8 +6,9 @@ public class Address {
 	private String block;
 	public String city;
 	public String  State;
+	//first change
 	
-	
+/
 	public String getStreet() {
 		return street;
 	}
